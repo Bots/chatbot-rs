@@ -32,7 +32,7 @@ impl EventHandler for Handler {
                 if let Ok(request) = CreateChatCompletionRequestArgs::default()
                     .model("gpt-3.5-turbo")
                     .messages(messages)
-                    .max_tokens(40_u32)
+                    .max_tokens(1000_u32)
                     .build()
                 {
                     if let Ok(response) = client.chat().create(request).await {
